@@ -10,7 +10,7 @@ var operator;
     operator["DIVISION"] = "/";
 })(operator || (operator = {}));
 const prompt = inquirer.createPromptModule();
-correctNumber;
+correctNumber; //import { correctNumber } from "./correctNumberFunction.js";
 async function mainCalculator() {
     const input = await prompt([
         {
@@ -53,4 +53,4 @@ async function mainCalculator() {
         console.log(chalk.red.bgCyanBright(`Final Result is : ${finalResult}`));
     }
 }
-mainCalculator();
+export default mainCalculator;
