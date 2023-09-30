@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "public": true,
   "scripts": {
     "start": "node ./js/main.js"
   },
