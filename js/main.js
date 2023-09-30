@@ -1,6 +1,5 @@
 import * as inquirer from "inquirer";
 import chalk from "chalk";
-import { correctNumber } from "./correctNumberFunction.js";
 //We will use operator:
 var operator;
 (function (operator) {
@@ -10,7 +9,14 @@ var operator;
     operator["DIVISION"] = "/";
 })(operator || (operator = {}));
 const prompt = inquirer.createPromptModule();
-correctNumber; //import { correctNumber } from "./correctNumberFunction.js";
+function correctNumber(input) {
+    if (isNaN(parseFloat(input))) {
+        return chalk.bgRed("please enter a correct number");
+    }
+    else {
+        return true;
+    }
+}
 async function mainCalculator() {
     const input = await prompt([
         {

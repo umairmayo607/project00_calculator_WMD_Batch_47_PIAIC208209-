@@ -1,7 +1,6 @@
 import * as inquirer from "inquirer";
 
 import chalk from "chalk";
-import { correctNumber } from "./correctNumberFunction.js";
 
 //We will use operator:
 enum operator {
@@ -13,8 +12,13 @@ enum operator {
 
 const prompt = inquirer.createPromptModule();
 
-correctNumber; //import { correctNumber } from "./correctNumberFunction.js";
-
+function correctNumber(input: string): boolean | string {
+  if (isNaN(parseFloat(input))) {
+    return chalk.bgRed("please enter a correct number");
+  } else {
+    return true;
+  }
+}
 async function mainCalculator() {
   const input = await prompt([
     {
