@@ -60,3 +60,4 @@ async function mainCalculator() {
     }
 }
 mainCalculator();
+export default mainCalculator;
