@@ -59,5 +59,4 @@ async function mainCalculator() {
         console.log(chalk.red.bgCyanBright(`Final Result is : ${finalResult}`));
     }
 }
-mainCalculator();
 export default mainCalculator;
